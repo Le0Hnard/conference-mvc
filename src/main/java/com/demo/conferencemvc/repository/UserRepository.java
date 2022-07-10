@@ -1,7 +1,9 @@
 package com.demo.conferencemvc.repository;
 
 import com.demo.conferencemvc.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository {
-    User save(User user);
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
 }
